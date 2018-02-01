@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 3000\" \"sleepms 100 && opener http://localhost:3000/index.html\"",
+    "test": "./node_modules/.bin/mocha test.js"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "http-server": "^0.10.0",
+    "opener": "^1.4.3",
+    "sleep-ms": "^2.0.1"
+  }
+}

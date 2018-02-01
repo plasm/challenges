@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test.js"
+  },
+  "dependencies": {
+    "mocha": "^4.0.1"
+  }
+}

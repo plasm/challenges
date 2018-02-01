@@ -1,0 +1,54 @@
+.block
+  position: relative
+  padding: 30px 0 20px 0
+  font-size: $font_small
+  color: $text_color
+  border-bottom: 2px solid #f0f0f0
+  text-align: left
+  line-height: 1.3
+  clear: both
+
+  &--noborder
+    border-bottom: none
+
+  +max-screen($bp-ipad)
+    text-align: left
+
+  &__label
+    position: relative
+    font-size: $font_mini
+    font-weight: 500
+    color: $label_color
+    margin-bottom: 12px
+
+    &--list
+      font-weight: 400
+      margin-bottom: 0
+      color: $text_color
+      font-size: $font_small
+
+  &__value
+    position: relative
+    font-weight: 600
+    float: right
+
+    +max-screen($bp-ipad)
+      display: block
+      position: relative
+      float: none
+
+      .block__list &
+        float: right
+
+    > span
+      font-weight: 400
+
+  &__list
+    margin: 8px 0 0 0
+    padding: 0
+    list-style: none
+
+    &__item
+      position: relative
+      margin-bottom: 6px
+

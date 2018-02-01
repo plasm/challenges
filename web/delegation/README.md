@@ -1,0 +1,1 @@
+The index.html contains a list of 10,000 anchors. Once you click on an anchor, you must show an alert containing the anchor's text.

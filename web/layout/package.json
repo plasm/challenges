@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "layout",
+  "version": "1.0.0",
+  "description": "Create a responsive web page based on this layout:",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "opener": "^1.4.3",
+    "sleep-ms": "^2.0.1"
+  },
+  "scripts": {
+    "start": "npm run open",
+    "open": "concurrently  \"gulp webserver\" \"gulp\" \"http-server -a localhost -p 3000\" \"sleepms 100 && opener http://localhost:3000/index.html\""
+  },
+  "author": "",
+  "license": "ISC"
+}

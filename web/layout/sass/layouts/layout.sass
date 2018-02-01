@@ -1,0 +1,31 @@
+*
+  outline: none
+  box-sizing: border-box
+
+body
+  font-family: "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif
+  color: $text_color
+
+
+*::selection
+  background: $primary_color
+  color: #FFFFFF
+  text-shadow: none
+
+*::-moz-selection
+  background: $primary_color
+  color: #FFFFFF
+  text-shadow: none
+
+// Container app
+.container-layout
+  display: block
+  width: 500px
+  margin: 0 auto
+
+  +max-screen($bp-ipad + 40px)
+    width: 100%
+    padding: 0 20px
+
+.highlight
+  color: $secondary_color

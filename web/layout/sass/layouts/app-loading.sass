@@ -1,0 +1,33 @@
+.app-loading
+
+  &:after
+    +transform( rotate(0deg) )
+    +border-radius(10px)
+    background: $primary_color
+    content: ""
+    display: block
+    width: 50px
+    height: 50px
+    border: 0
+    position: fixed
+    z-index: 2001
+    left: 50%
+    top: 50%
+    margin-top: -25px
+    margin-left: -25px
+    animation-timing-function: linear
+    animation-name: animation-loading
+    animation-duration: .85s
+    animation-iteration-count: infinite
+
+  &:before
+    content: ""
+    display: block
+    position: fixed
+    z-index: 2000
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    background: rgba(255,255,255,.8)

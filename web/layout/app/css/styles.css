@@ -1,0 +1,280 @@
+/*---------------------------------
+ * Setup: variables, mixins, utility ...
+ --------------------------------*/
+/*
+ *html5doctor.com Reset Stylesheet
+ *v1.6.1
+ *Last Updated: 2010-09-17
+ *Author: Richard Clark - http://richclarkdesign.com
+ *Twitter: @rich_clark */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+.p-color {
+  color: #6BCE85; }
+
+.to-upper {
+  text-transform: uppercase; }
+
+.visible-mobile {
+  display: none; }
+  @media only screen and (max-width: 500px) {
+    .visible-mobile {
+      display: block; } }
+
+/*---------------------------------
+ * Fonts
+ --------------------------------*/
+/*---------------------------------
+ * Layout and Bootstrap
+ --------------------------------*/
+* {
+  outline: none;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+  color: #333333; }
+
+*::selection {
+  background: #6BCE85;
+  color: #FFFFFF;
+  text-shadow: none; }
+
+*::-moz-selection {
+  background: #6BCE85;
+  color: #FFFFFF;
+  text-shadow: none; }
+
+.container-layout {
+  display: block;
+  width: 500px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 540px) {
+    .container-layout {
+      width: 100%;
+      padding: 0 20px; } }
+
+.highlight {
+  color: #FEE94E; }
+
+.app-loading:after {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background: #6BCE85;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  position: fixed;
+  z-index: 2001;
+  left: 50%;
+  top: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+  animation-timing-function: linear;
+  animation-name: animation-loading;
+  animation-duration: .85s;
+  animation-iteration-count: infinite; }
+
+.app-loading:before {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8); }
+
+/*---------------------------------
+ * Animations
+ --------------------------------*/
+@-webkit-keyframes flobflob {
+  from {
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+    transform: rotate(8deg); }
+  to {
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    transform: rotate(-8deg); } }
+
+@keyframes flobflob {
+  from {
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+    transform: rotate(8deg); }
+  to {
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    transform: rotate(-8deg); } }
+
+/*---------------------------------
+ * Patterns
+ --------------------------------*/
+.hero-section {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 30px 0;
+  background: #6BCE85; }
+
+.header__logo {
+  position: relative;
+  display: block;
+  height: 65px;
+  margin-bottom: 12px;
+  transform-origin: center bottom;
+  -webkit-animation: flobflob 2s ease infinite alternate;
+  animation: flobflob 2s ease infinite alternate; }
+
+.header__title {
+  font-size: 40px;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  color: #FFFFFF;
+  margin: 0 0 20px 0; }
+  @media only screen and (max-width: 500px) {
+    .header__title {
+      font-size: 30px; } }
+
+.header__text {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #FFF;
+  word-break: break-all; }
+
+.block {
+  position: relative;
+  padding: 30px 0 20px 0;
+  font-size: 15px;
+  color: #333333;
+  border-bottom: 2px solid #f0f0f0;
+  text-align: left;
+  line-height: 1.3;
+  clear: both; }
+  .block--noborder {
+    border-bottom: none; }
+  @media only screen and (max-width: 500px) {
+    .block {
+      text-align: left; } }
+  .block__label {
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    color: #C1C1C1;
+    margin-bottom: 12px; }
+    .block__label--list {
+      font-weight: 400;
+      margin-bottom: 0;
+      color: #333333;
+      font-size: 15px; }
+  .block__value {
+    position: relative;
+    font-weight: 600;
+    float: right; }
+    @media only screen and (max-width: 500px) {
+      .block__value {
+        display: block;
+        position: relative;
+        float: none; }
+        .block__list .block__value {
+          float: right; } }
+    .block__value > span {
+      font-weight: 400; }
+  .block__list {
+    margin: 8px 0 0 0;
+    padding: 0;
+    list-style: none; }
+    .block__list__item {
+      position: relative;
+      margin-bottom: 6px; }
